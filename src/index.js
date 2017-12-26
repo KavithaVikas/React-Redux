@@ -1,5 +1,10 @@
 import { createStore , combineReducers, applyMiddleware} from "redux";
 import {createLogger} from "redux-logger";
+import React from "react";
+import {render} from "react-dom";
+import App from "./components/App";
+import {Provider} from "react-redux";
+
 
 const mathReducer = (state = {
     result: 1,
@@ -82,5 +87,9 @@ store.dispatch({
 
 store.dispatch({
     type:"SET_NAME",
-    payload:"Kavitha"
+    payload:"Prajwal"
 })
+
+render(<Provider store={store}>
+    <App/>
+    </Provider>, document.getElementById("root"));
