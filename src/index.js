@@ -2,7 +2,7 @@ import { createStore , combineReducers, applyMiddleware} from "redux";
 import {createLogger} from "redux-logger";
 import React from "react";
 import {render} from "react-dom";
-import App from "./components/App";
+import App from "./containers/App";
 import {Provider} from "react-redux";
 
 
